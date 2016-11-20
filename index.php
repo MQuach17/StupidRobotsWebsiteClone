@@ -27,22 +27,65 @@
 		<script src='about/about.controller.js'></script>
 		<script src='contact/contact.controller.js'></script>
 
+		<!-- Directives -->
+		<script src='directives/resize.js'></script>
+
+		<!-- Style -->
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+
 	</head>
 
 	<body ng-app="SiteApp">
 		<!-- Main Controller -->
 		<div ng-controller="MainController as vm">
-			<!-- Nav Bar -->
-			<div>
-				<div ng-click='vm.setView("Home")'>Home</div>
-				<div ng-click='vm.setView("Media")'>Media</div>
-				<div ng-click='vm.setView("Events")'>Events</div>
-				<div ng-click='vm.setView("Contact")'>Contact</div>
-				<div ng-click='vm.setView("About")'>About</div>
+
+			<!-- Top Bar -->
+			<div layout="column" layout-align="start start" style='width: 100%; height: {{navHeight}}px; border: 1px solid red'>
+							
+				<!-- Picture -->
+				<div layout='row' id="navBarPictureBox" style='1px solid black'>
+					<img src="{{vm.navBarPictureSrc}}" id="navBarPicture">
+				</div>
+
+				<!-- Nav Bar -->
+				<div layout='row' layout-align='space-between center' id='navBar'>
+			
+					<!-- HOME -->
+					<div ng-click='vm.setView("Home")' class="nav_item">Home</div>
+
+					<!-- lightening -->
+					<div class='bolt_spacer_box'>
+						<img src="{{vm.bolt}}"  class='bolt_spacer'>
+					</div>
+
+					<!-- MEDIA -->
+					<div ng-click='vm.setView("Media")' class="nav_item">Media</div>
+				
+					<!-- Stupid Robots Nav Logo -->
+					<div id="navBarLogoBox" layout='row' layout-align='center center'>
+						<img src="{{vm.stupidRobotsLogoSrc}}" id="navBarLogo">
+					</div>
+				
+					<!-- EVENTS -->
+					<div ng-click='vm.setView("Events")' class="nav_item">Events</div>
+		
+					<!-- lightening -->
+					<div class='bolt_spacer_box'>
+						<img src="{{vm.bolt}}"  class='bolt_spacer'>
+					</div>
+
+					<!-- ABOUT -->
+					<div ng-click='vm.setView("About")' class="nav_item">About</div>
+
+				</div><!-- end nav bar -->
+
 			</div>
 
 			<!-- Current View Loaded Here -->
-			<div ng-view></div>
+			<div ng-view layout='column' layout-align='start start' style='height: {{windowHeight}}px;' resizable>
+
+
+			</div>
 	
 		</div>
 	</body>

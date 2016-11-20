@@ -12,6 +12,11 @@ function MainController ($scope, $rootScope, $route, $routeParams, $location, $w
 	console.log('Main');
 
     var vm = this;
+
+	// img
+	vm.navBarPictureSrc = 'http://stupid-robots.s3.amazonaws.com/top_nav_picture.png';
+	vm.stupidRobotsLogoSrc = 'http://stupid-robots.s3.amazonaws.com/stupid_robots_logo.png';
+	vm.bolt = 'http://stupid-robots.s3.amazonaws.com/bolt.png';
 	
 	vm.setView = setView;
 

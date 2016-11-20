@@ -1,0 +1,61 @@
+/* HOME PAGE and NAVIGATION */
+#page-content-wrapper
+{
+	width: 100%;
+	overflow-y: auto; 
+	font-size: 12pt; 
+	font-family: 'Arial';
+}
+
+#navBar
+{
+	width: 100%;
+	height: 60px;
+	background-color: #0E1034;
+	
+}
+
+#navBarLogoBox
+{
+	width: 300px;
+	z-index: 90000;
+}
+
+#navBarLogo
+{
+	width: 80%;
+}
+
+#navBarPictureBox
+{
+	width: 100%;
+	height: 60%;
+	border: 1px solid black;
+}
+
+#navBarPicture
+{
+	width: 100%;
+	height: 90%;	
+}
+
+.nav_item
+{
+	width: 120px;
+	text-align: center;
+	color: #E35524;
+}
+
+.bolt_spacer_box
+{
+	width: 30px;
+	height: 30px;
+	padding-top: 6px;
+}
+
+.bolt_spacer
+{
+	width: 50px;
+	height: 10px;
+}
+
