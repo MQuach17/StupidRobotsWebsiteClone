@@ -1,1 +1,12 @@
 <p>Media</p>
+<!-- slider container -->
+<div class="slider-container">
+	<img ng-repeat="photo in photos" class="photo-slide" ng-src="{{photo.src}}" ng-show="isActive($index)">
+	<a href="" class="prev-slide" ng-click="showPrev()">prev</a>
+	<a href="" class="next-slide" ng-click="showNext()">next</a>
+	<ul class= "photo-nav">
+		<li ng-repeat="photo in photos" ng-class="'active-photo' :isActive($index)" >
+			<img src="{{photo.src}}" alt="{{photo.desc}}" title ="{{photo.desc}}" ng-click= "showPhoto($index)" class="photo-thumbnail">
+		</li>
+	</ul>
+</div>
