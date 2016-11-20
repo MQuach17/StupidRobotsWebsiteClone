@@ -27,10 +27,12 @@ angular.module('SiteApp', ['ngRoute','ngMaterial'])
   })
   .when('/ContactUs', {
 	templateUrl: 'contact/contact.html',
+	controller: 'ContactController',
 	controllerAs: 'vm'
   })
   .when('/About', {
 	templateUrl: 'about/about.html',
+	controller: 'AboutController',
 	controllerAs: 'vm'
   })
 .otherwise({
