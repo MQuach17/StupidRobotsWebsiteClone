@@ -9,8 +9,17 @@ function MainController ($scope, $rootScope, $route, $routeParams, $location, $w
 	$scope.$route = $route;
     $scope.$location = $location;
     $scope.$routeParams = $routeParams;
+	console.log('Main');
 
     var vm = this;
+	
+	vm.setView = setView;
+
+	function setView( page )
+	{
+		console.log(page);
+		$location.path(page);
+	}	
 
 }
 

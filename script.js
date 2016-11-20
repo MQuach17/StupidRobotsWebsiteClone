@@ -10,6 +10,11 @@ angular.module('SiteApp', ['ngRoute','ngMaterial'])
     controller: 'MainController',
     controllerAs: 'vm'
   })
+  .when('/index.php', {
+    templateUrl: 'home/home.html',
+    controller: 'MainController',
+    controllerAs: 'vm'
+  })
   .when('/Home', {
     templateUrl: 'home/home.html',
     controller: 'MainController',
@@ -25,7 +30,7 @@ angular.module('SiteApp', ['ngRoute','ngMaterial'])
 	controller: 'EventsController',
 	controllerAs: 'vm'
   })
-  .when('/ContactUs', {
+  .when('/Contact', {
 	templateUrl: 'contact/contact.html',
 	controller: 'ContactController',
 	controllerAs: 'vm'
@@ -35,14 +40,11 @@ angular.module('SiteApp', ['ngRoute','ngMaterial'])
 	controller: 'AboutController',
 	controllerAs: 'vm'
   })
-.otherwise({
-    redirectTo: '/home.html'
-  });
 })
 .run(function($rootScope, $location, $window) {
 
     $rootScope.$on( "$routeChangeStart", function(event, next, current) {
-
+		console.log(current);
     });
 
     angular.element(window).on("resize", function() {
