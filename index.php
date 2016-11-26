@@ -18,10 +18,12 @@
         <script src="ang/angular-material/angular-material.min.js"></script>
         <link rel="stylesheet" type="text/css" href="ang/angular-material/angular-material.css">  
 
+		<!-- Moment.js -->
+		<script src='src/moment/moment.js'></script>
+
 		<!-- Controllers -->
 		<script src='script.js'></script>
 		<script src='main/main.controller.js'></script>
-		<script src='home/home.controller.js'></script>
 		<script src='media/media.controller.js'></script>
 		<script src='events/events.controller.js'></script>
 		<script src='about/about.controller.js'></script>
@@ -40,7 +42,7 @@
 		<div ng-controller="MainController as vm">
 
 			<!-- Top Bar -->
-			<div layout="column" layout-align="start start" style='width: 100%; height: {{navHeight}}px; border: 1px solid red'>
+			<div layout="column" layout-align="start start" style='width: 100%; height: {{navHeight}}px;'>
 							
 				<!-- Picture -->
 				<div layout='row' id="navBarPictureBox" style='1px solid black'>
@@ -82,8 +84,8 @@
 			</div>
 
 			<!-- Current View Loaded Here -->
-			<div ng-view layout='column' layout-align='start start' style='height: {{windowHeight}}px;' resizable>
-
+			<div ng-view layout='column' layout-align='start start' style='height: {{windowHeight}}px; overflow-y: auto' resizable>
+			
 
 			</div>
 	
