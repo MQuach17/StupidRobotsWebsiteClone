@@ -6,17 +6,17 @@ angular.module('SiteApp', ['ngRoute','ngMaterial'])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
   .when('/', {
-    templateUrl: 'home/home.html',
+    templateUrl: 'main/home.html',
     controller: 'MainController',
     controllerAs: 'vm'
   })
   .when('/index.php', {
-    templateUrl: 'home/home.html',
+    templateUrl: 'main/home.html',
     controller: 'MainController',
     controllerAs: 'vm'
   })
   .when('/Home', {
-    templateUrl: 'home/home.html',
+    templateUrl: 'main/home.html',
     controller: 'MainController',
     controllerAs: 'vm'
   })

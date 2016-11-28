@@ -1,0 +1,97 @@
+<div style='height: 2200px; width: 100%;'>
+
+	<!-- Upcoming Events Box -->
+	<div id="home_upcoming_events_box" layout='column'>
+
+		<!-- Upcoming Events Scroller -->
+		<div id="upcoming_events" layout='row' layout-align='space-between center'>
+	
+			<!-- Events -->
+			<div class='home_event' ng-repeat='event in vm.upcoming_events' layout='column' layout-align='space-between center'>
+				
+				<!-- Venue Name -->
+				<div class="event_venue_name"><b>{{event.venue_name}}</b></div>
+
+				<!-- Event Logo -->
+				<div class="event_spacer_logo">
+					<img src="{{vm.bolt}}"  class='bolt_spacer'>
+				</div>
+
+				<!-- Event Datetime -->
+				<div class='event_time'>{{ event.datetime }}</div>
+			</div>
+
+		</div>
+
+		<!-- Book a Show -->
+		<div id='book_a_show_container' layout='row' layout-align='center center'>
+			<md-button id='book_a_show_btn' class='md-primary' ng-click='vm.setView("Contact")'>Book a Show!</md-button>
+		</div>
+
+	</div>
+	
+	<!-- Navy Spacer -->
+	<div class='navy_spacer'></div>
+
+	<!-- Tag Line Box -->
+	<div id='tag_box' layout='column' layout-align='center center'>
+
+    	<!-- Tag Line -->
+    	<div id='tag_line'>&nbsp;&nbsp;&nbsp;&nbsp;{{ vm.tag_line }}</div>
+
+    	<!-- Bio -->
+    	<div id='home_bio'>&nbsp;&nbsp;&nbsp;&nbsp;{{ vm.home_bio }}</div>
+
+		<!-- Bio 2 -->
+		<div id='home_bio_2'>{{ vm.home_bio_2 }}</div>
+
+	</div>
+
+	<!-- Navy Spacer -->
+	<div class='navy_spacer'></div>
+
+	<!-- Media Box -->
+	<div id='media_box' layout='column' layout-align='center center'>
+		<iframe width="854" height="480" src="https://www.youtube.com/embed/BHRUO-gcokM" frameborder="0" allowfullscreen></iframe>
+
+	</div>
+
+	<!-- footer.html -->
+	<div class='footer_box' layout='column' layout-align='center center'>
+		
+		<div>
+			<img src="{{vm.stupidRobotsLogoSrc}}" class="footerLogo">
+		</div>
+
+		<div class='footer_nav' layout='row' layout-align='space-between center'>
+			<div class='footer_text'>Home</div>
+			<div class='footer_spacer'>|</div>
+			<div class='footer_text'>Media</div>
+			<div class='footer_spacer'>|</div>
+			<div class='footer_text'>Events</div>
+			<div class='footer_spacer'>|</div>
+			<div class='footer_text'>About</div>
+			<div class='footer_spacer'>|</div>
+			<div class='footer_text'>Contact Us</div>
+		</div>
+
+		<div class='footer_social_links' layout='row' layout-align='space-between center'>
+			<!-- Facebook -->
+			<div class='sm_link' ng-click='vm.openSocialMediaLink("facebook")'>
+				<img src='img/facebook.png'>
+			</div>
+
+			<!-- Insta -->
+			<div class='sm_link' ng-click='vm.openSocialMediaLink("instagram")'>
+                <img src='img/instagram.png'>
+            </div>
+
+			<!-- Twitter -->
+			<div class='sm_link' ng-click='vm.openSocialMediaLink("twitter")'>
+                <img src='img/twitter.png'>
+            </div>
+		</div>
+
+	</div>
+
+</div>
