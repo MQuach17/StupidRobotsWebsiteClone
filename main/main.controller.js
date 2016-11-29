@@ -85,7 +85,7 @@ function MainController ($scope, $rootScope, $route, $routeParams, $location, $w
 	// Social Media Links
 	vm.facebook_link = 'https://www.facebook.com/thestupidrobots/';
 	vm.instagram_link = 'https://www.instagram.com/thestupidrobots/';
-	vm.twitter_link = '';
+	vm.youtube_link = 'https://www.youtube.com/channel/UCNoeUSrAglbb4djg_V7_vBA';
 
 
 	function setView( page )
@@ -110,9 +110,9 @@ function MainController ($scope, $rootScope, $route, $routeParams, $location, $w
 		
 			loc = vm.instagram_link;
 
-		} else if( name == 'twitter' ) {
+		} else if( name == 'youtube' ) {
 			
-			loc = vm.twitter_link;
+			loc = vm.youtube_link;
 		} else {
 			
 		}

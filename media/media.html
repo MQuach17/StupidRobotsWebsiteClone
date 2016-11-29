@@ -1,12 +1,25 @@
+
 <p>Media</p>
 <!-- slider container -->
 <div class="slider-container">
-	<img ng-repeat="photo in photos" class="photo-slide" ng-src="{{photo.src}}" ng-show="isActive($index)">
-	<a href="" class="prev-slide" ng-click="showPrev()">prev</a>
-	<a href="" class="next-slide" ng-click="showNext()">next</a>
+	<img ng-repeat="photo in photos" class="photo-slide" ng-src="{{photo.src}}" ng-show="isActivePhoto($index)">
+	<a href="" class="prev-slide" ng-click="showPrevPhoto()">prev</a>
+	<a href="" class="next-slide" ng-click="showNextPhoto()">next</a>
 	<ul class= "photo-nav">
 		<li ng-repeat="photo in photos" ng-class="'active-photo' :isActive($index)" >
 			<img src="{{photo.src}}" alt="{{photo.desc}}" title ="{{photo.desc}}" ng-click= "showPhoto($index)" class="photo-thumbnail">
 		</li>
 	</ul>
 </div>
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<div class="slider-container">
+	<iframe ng-repeat="video in videos" id="yt-video-{{$index}}" ng-src="{{trustSrc(video.src)}}" ng-show="isActiveVideo($index)" frameborder="0" allowfullscreen width="854" height="480"></iframe>
+	<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bcrPuSRYA4U?list=PLAYFVhxsaqDu_B2-1AdzEgW8TfDA-yrKi" frameborder="0" allowfullscreen></iframe> -->
+	</div>
+
+
+</script>	
+	<a href="" class="prev-slide" ng-click="showPrevVideo()">prev</a>
+	<a href="" class="next-slide" ng-click="showNextVideo()">next</a>	
+</div>	
