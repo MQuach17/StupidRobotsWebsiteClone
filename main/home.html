@@ -1,4 +1,4 @@
-<div style='height: 2200px; width: 100%;'>
+<div style='width: 100%;'>
 
 	<!-- Upcoming Events Box -->
 	<div id="home_upcoming_events_box" layout='column'>
@@ -31,24 +31,28 @@
 	</div>
 	
 	<!-- Navy Spacer -->
-	<div class='navy_spacer'></div>
+	<!-- <div class='navy_spacer'></div> -->
 
 	<!-- Tag Line Box -->
 	<div id='tag_box' layout='column' layout-align='center center'>
+		<!-- Tag line content -->
+    	<div id="tag_content">
+        	<div id='tag_line'>{{ vm.tag_line }}</div>
 
+	    	<!-- Bio -->
+	    	<div id='home_bio'>&nbsp;&nbsp;&nbsp;&nbsp;{{ vm.home_bio }}</div>
+
+			<!-- Bio 2 -->
+			<div id='home_bio_2'>{{ vm.home_bio_2 }}</div>
+			
+    	</div>
     	<!-- Tag Line -->
-    	<div id='tag_line'>&nbsp;&nbsp;&nbsp;&nbsp;{{ vm.tag_line }}</div>
 
-    	<!-- Bio -->
-    	<div id='home_bio'>&nbsp;&nbsp;&nbsp;&nbsp;{{ vm.home_bio }}</div>
-
-		<!-- Bio 2 -->
-		<div id='home_bio_2'>{{ vm.home_bio_2 }}</div>
 
 	</div>
 
 	<!-- Navy Spacer -->
-	<div class='navy_spacer'></div>
+	<!-- <div class='navy_spacer'></div> -->
 
 	<!-- Media Box -->
 	<div id='media_box' layout='column' layout-align='center center'>

@@ -31,6 +31,7 @@
 
 		<!-- Directives -->
 		<script src='directives/resize.js'></script>
+		<script src='directives/navscroll.js'></script>
 
 		<!-- Style -->
 		<link rel="stylesheet" type="text/css" href="style/style.css">
@@ -46,11 +47,11 @@
 							
 				<!-- Picture -->
 				<div layout='row' id="navBarPictureBox" style='1px solid black'>
-					<img src="{{vm.navBarPictureSrc}}" id="navBarPicture">
+					<!-- <img src="{{vm.navBarPictureSrc}}" id="navBarPicture"> -->
 				</div>
 
 				<!-- Nav Bar -->
-				<div layout='row' layout-align='space-between center' id='navBar'>
+				<div layout='row' layout-align='space-between center' id='navBar' stickynav ng-class="{stickyNav:sticky}">
 			
 					<!-- HOME -->
 					<div ng-click='vm.setView("Home")' class="nav_item">Home</div>
@@ -64,8 +65,8 @@
 					<div ng-click='vm.setView("Media")' class="nav_item">Media</div>
 				
 					<!-- Stupid Robots Nav Logo -->
-					<div id="navBarLogoBox" layout='row' layout-align='center center'>
-						<img src="{{vm.stupidRobotsLogoSrc}}" id="navBarLogo">
+					<div id="navBarLogoBox" layout='row' logoresize layout-align='center center'>
+						<img src="{{vm.stupidRobotsLogoSrc}}" id="navBarLogo" ng-class="{'smallNavLogo' : boolSmall, 'largeNavLogo' : !boolSmall}" >
 					</div>
 				
 					<!-- EVENTS -->
@@ -84,8 +85,8 @@
 			</div>
 
 			<!-- Current View Loaded Here -->
-			<div ng-view layout='column' layout-align='start start' style='height: {{windowHeight}}px; overflow-y: auto' resizable>
-			
+			<div ng-view layout='column' layout-align='start start' style='height: {{windowHeight}}px; ' resizable>
+
 
 			</div>
 	

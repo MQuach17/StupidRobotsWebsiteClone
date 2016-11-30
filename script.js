@@ -50,6 +50,9 @@ angular.module('SiteApp', ['ngRoute','ngMaterial'])
     angular.element(window).on("resize", function() {
         $rootScope.$apply();
     });
+    angular.element(window).on("scroll", function() {
+        $rootScope.$apply();
+    });    
 
 });
 })(window.angular);

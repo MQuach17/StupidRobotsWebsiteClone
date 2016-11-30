@@ -12,24 +12,36 @@
 	width: 100%;
 	height: 65px;
 	background-color: #0E1034;
+	z-index: 10;
 	
 }
-
+.stickyNav{
+	position: fixed;
+	top: 0;
+}
 #navBarLogoBox
 {
-	width: 250px;
 	z-index: 90000;
+}
+.largeNavLogo{
+	width: 250px;
+}
+.smallNavLogo{
+	width: 45px;
 }
 
 #navBarLogo
 {
-	width: 80%;
+	// width: 80%;
 }
 
 #navBarPictureBox
 {
 	width: 100%;
-	height: 60%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+	background-image: url('http://stupid-robots.s3.amazonaws.com/top_nav_picture.png');
+	height: 500px;
 }
 
 #navBarPicture
@@ -74,12 +86,12 @@
 #home_upcoming_events_box
 {
 	width: 100%;
-	height: 570px;
 	background-image: url("https://s3.amazonaws.com/stupid-robots/background_bolts.png");
 	background-color:#B8C1C8;
 	background-size:cover;
 	padding-left: 20px;
     padding-right: 20px;
+    padding-top: 50px;
 }
 
 #upcoming_events 
@@ -114,15 +126,19 @@
 {
 	min-height: 140px;
 	width: 100%;
+	padding-bottom:20px;
 }
 
 #book_a_show_btn
 {
+	text-transform: none;
+	font-weight: 700;
 	min-width: 400px;
 	background-color: #E35524;
 	color: white;
 	font-size: 16pt;
 	min-height: 55px;
+    box-shadow: 0px 8px 20px #000;	
 }
 
 .navy_spacer
@@ -136,9 +152,14 @@
 {
 	min-height: 300px;
 	color: #0E1034;
-	padding-left: 50px;
-	padding-right: 50px;
+	padding: 60px 0px;
+	background: #0E1034;
 	font-size: 16pt;
+
+}
+#tag_content{
+	background: #fff;
+	padding: 50px 50px;
 }
 
 #tag_line
@@ -146,6 +167,7 @@
 	font-weight: bold;
 	font-size: 20pt;
 	padding-bottom: 20px;
+	text-align: center;
 }
 
 #home_bio
