@@ -217,3 +217,81 @@
 .footer_social_links .sm_link img{
 	width: 20px;
 }
+
+/* About page styles */
+
+#about-page{
+	width: 100%;
+	background-image: url("https://s3.amazonaws.com/stupid-robots/background_bolts.png");
+	background-color:#B8C1C8;
+    background-size: contain;
+    background-repeat: repeat-y;
+}
+.about-card-wrapper{
+	background: #0E1034;
+	padding: 50px 0px;
+	margin: 150px 0px;
+}
+.about-card-contents{
+	background: #EFF5FA;
+	padding: 30px;
+	color: #0E1034;
+}
+.band-memeber-photo img {
+    width: 300px;
+}
+
+/* Media page styles */
+#media-wrapper{
+	width: 100%;
+}
+#media-container{
+	width: 80%;
+	margin-top:150px;
+	border: 1px solid black;
+}
+#media-controls{
+	border: 1px solid red;
+	width: 100%;
+}
+#sliders{
+	border: 1px solid green;
+	width: 100%;
+}
+.photos-tab{
+	border: 1px solid purple;	
+}
+#photo-slider-container{
+	padding: 20px;
+}
+.videos-tab{
+	border: 1px solid orange;
+}
+.slider-container{
+
+}
+.photo-nav-wrapper{
+	background-color: #0E1034;
+}
+.photo-nav{
+	list-style: none;
+	padding: 0;
+}
+.photo-item{
+	margin:0 10px;
+
+}
+.photo-thumbnail{
+	max-width: 200px;
+	max-height: 100px;
+}
+.active-photo{
+	border: 1px solid #EFF5FA;
+}
+.photo-slide{
+	height: 250px;
+	width:250px;
+}
+#tabs-container{
+	width: 100%;
+}

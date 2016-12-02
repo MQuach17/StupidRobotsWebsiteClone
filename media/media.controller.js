@@ -69,7 +69,7 @@ function MediaController ($scope, $rootScope, $route, $routeParams, $location, $
     };
     // show clicked image
     $scope.showPhoto = function(index){
-    	$scope._Index = index;
+    	$scope._PhotoIndex = index;
     }
 
 

@@ -1,25 +1,72 @@
+<div id="media-wrapper" layout="column" layout-align="center center">
+	<div id="media-container" layout="column" layout-align="center center">
+	<md-tabs md-dynamic-height id="tabs-container">
+		<md-tab label="Photos">
+			<md-content class="">
+				<div class="slider-container" >
+					<div id="photo-slider-container" layout="column" layout-align="space-between center">
 
-<p>Media</p>
-<!-- slider container -->
-<div class="slider-container">
-	<img ng-repeat="photo in photos" class="photo-slide" ng-src="{{photo.src}}" ng-show="isActivePhoto($index)">
-	<a href="" class="prev-slide" ng-click="showPrevPhoto()">prev</a>
-	<a href="" class="next-slide" ng-click="showNextPhoto()">next</a>
-	<ul class= "photo-nav">
-		<li ng-repeat="photo in photos" ng-class="'active-photo' :isActive($index)" >
-			<img src="{{photo.src}}" alt="{{photo.desc}}" title ="{{photo.desc}}" ng-click= "showPhoto($index)" class="photo-thumbnail">
-		</li>
-	</ul>
+						<img ng-repeat="photo in photos" class="photo-slide" ng-src="{{photo.src}}" ng-show="isActivePhoto($index)">
+					</div>
+					<div class="photo-nav-wrapper" layout="row" layout-align="space-between center">
+						<a href="" class="prev-slide" ng-click="showPrevPhoto()">prev</a>			
+						<ul class= "photo-nav" layout="row" layout-align="space-around">
+							<li ng-repeat="photo in photos" ng-class="isActivePhoto($index) ? 'active-photo': ''" class="photo-item" flex>
+								<img src="{{photo.src}}" alt="{{photo.desc}}" title ="{{photo.desc}}" ng-click= "showPhoto($index)" class="photo-thumbnail">
+							</li>
+						</ul>
+						<a href="" class="next-slide" ng-click="showNextPhoto()">next</a>					
+					</div>
+			
+				</div>				
+			</md-content>
+		</md-tab>
+		<md-tab label="Videos">
+			<md-content class="md-padding">
+				<div class="slider-container">
+					<iframe ng-repeat="video in videos" id="yt-video-{{$index}}" ng-src="{{trustSrc(video.src)}}" ng-show="isActiveVideo($index)" frameborder="0" allowfullscreen width="550" height="350"></iframe>
+					<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bcrPuSRYA4U?list=PLAYFVhxsaqDu_B2-1AdzEgW8TfDA-yrKi" frameborder="0" allowfullscreen></iframe> -->
+
+
+					<a href="" class="prev-slide" ng-click="showPrevVideo()">prev</a>
+					<a href="" class="next-slide" ng-click="showNextVideo()">next</a>	
+				</div>	
+			</md-content>
+		</md-tab>		
+	</md-tabs>
+<!-- 	<div id="media-controls" layout="row" layout-align="space-around center">
+		<div class="photos-tab" ng-click="show=false">Photos</div>
+		<div class="videos-tab" ng-click="show=true">Videos</div>
+	</div> -->
+	<!-- slider container -->
+<!-- 	<div id="sliders">
+
+		<div class="slider-container" ng-hide="show">
+			<div id="photo-slider-container" layout="column" layout-align="space-between center">
+
+				<img ng-repeat="photo in photos" class="photo-slide" ng-src="{{photo.src}}" ng-show="isActivePhoto($index)">
+			</div>
+			<div class="photo-nav-wrapper" layout="row" layout-align="space-between center">
+				<a href="" class="prev-slide" ng-click="showPrevPhoto()">prev</a>			
+				<ul class= "photo-nav" layout="row" layout-align="space-around">
+					<li ng-repeat="photo in photos" ng-class="isActivePhoto($index) ? 'active-photo': ''" class="photo-item" flex>
+						<img src="{{photo.src}}" alt="{{photo.desc}}" title ="{{photo.desc}}" ng-click= "showPhoto($index)" class="photo-thumbnail">
+					</li>
+				</ul>
+				<a href="" class="next-slide" ng-click="showNextPhoto()">next</a>					
+			</div>
+	
+		</div>
+		<script src="https://www.youtube.com/iframe_api"></script>
+
+		<div class="slider-container" ng-show="show">
+			<iframe ng-repeat="video in videos" id="yt-video-{{$index}}" ng-src="{{trustSrc(video.src)}}" ng-show="isActiveVideo($index)" frameborder="0" allowfullscreen width="550" height="350"></iframe>
+
+
+			<a href="" class="prev-slide" ng-click="showPrevVideo()">prev</a>
+			<a href="" class="next-slide" ng-click="showNextVideo()">next</a>	
+		</div>	
+	</div>	 -->	
 </div>
-<script src="https://www.youtube.com/iframe_api"></script>
+</div>
 
-<div class="slider-container">
-	<iframe ng-repeat="video in videos" id="yt-video-{{$index}}" ng-src="{{trustSrc(video.src)}}" ng-show="isActiveVideo($index)" frameborder="0" allowfullscreen width="854" height="480"></iframe>
-	<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bcrPuSRYA4U?list=PLAYFVhxsaqDu_B2-1AdzEgW8TfDA-yrKi" frameborder="0" allowfullscreen></iframe> -->
-	</div>
-
-
-</script>	
-	<a href="" class="prev-slide" ng-click="showPrevVideo()">prev</a>
-	<a href="" class="next-slide" ng-click="showNextVideo()">next</a>	
-</div>	
