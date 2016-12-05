@@ -14,7 +14,6 @@ function MainController ($scope, $rootScope, $route, $routeParams, $location, $w
     var vm = this;
 
 	vm.setView = setView;
-	vm.openSocialMediaLink = openSocialMediaLink;
 
 	// Nav Bar Images
 	vm.navBarPictureSrc = 'http://stupid-robots.s3.amazonaws.com/top_nav_picture.png';
@@ -81,12 +80,10 @@ function MainController ($scope, $rootScope, $route, $routeParams, $location, $w
 	// Media Player
 	vm.media_link = 'https://www.youtube.com/embed/BHRUO-gcokM';
 
-
 	// Social Media Links
 	vm.facebook_link = 'https://www.facebook.com/thestupidrobots/';
 	vm.instagram_link = 'https://www.instagram.com/thestupidrobots/';
 	vm.youtube_link = 'https://www.youtube.com/channel/UCNoeUSrAglbb4djg_V7_vBA';
-
 
 	function setView( page )
 	{
