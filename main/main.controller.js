@@ -14,7 +14,6 @@ function MainController ($scope, $rootScope, $route, $routeParams, $location, $w
     var vm = this;
 
 	vm.setView = setView;
-	vm.openSocialMediaLink = openSocialMediaLink;
 
 	// Nav Bar Images
 	vm.navBarPictureSrc = 'http://stupid-robots.s3.amazonaws.com/top_nav_picture.png';
@@ -82,11 +81,6 @@ function MainController ($scope, $rootScope, $route, $routeParams, $location, $w
 	vm.media_link = 'https://www.youtube.com/embed/BHRUO-gcokM';
 
 
-	// Social Media Links
-	vm.facebook_link = 'https://www.facebook.com/thestupidrobots/';
-	vm.instagram_link = 'https://www.instagram.com/thestupidrobots/';
-	vm.twitter_link = '';
-
 
 	function setView( page )
 	{
@@ -94,35 +88,6 @@ function MainController ($scope, $rootScope, $route, $routeParams, $location, $w
 		$location.path(page);
 	}	
 
-	/**
- 	* Nav to social media page
- 	* @param String name - name of social media site
- 	* 
- 	**/
-	function openSocialMediaLink( name )
-	{
-		
-		if( name == 'facebook' )
-		{
-			loc = vm.facebook_link;
-
-		} else if( name == 'instagram' ) {
-		
-			loc = vm.instagram_link;
-
-		} else if( name == 'twitter' ) {
-			
-			loc = vm.twitter_link;
-		} else {
-			
-		}
-		
-		// open tab
-		if( typeof loc !== 'undefined' )
-		{
-			window.open(loc,'_blank');
-		}
-	}
 
 }
 

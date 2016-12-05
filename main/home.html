@@ -37,13 +37,13 @@
 	<div id='tag_box' layout='column' layout-align='center center'>
 
     	<!-- Tag Line -->
-    	<div id='tag_line'>&nbsp;&nbsp;&nbsp;&nbsp;{{ vm.tag_line }}</div>
+    	<div id='tag_line'>{{ vm.tag_line }}</div>
 
     	<!-- Bio -->
     	<div id='home_bio'>&nbsp;&nbsp;&nbsp;&nbsp;{{ vm.home_bio }}</div>
 
 		<!-- Bio 2 -->
-		<div id='home_bio_2'>{{ vm.home_bio_2 }}</div>
+		<div id='home_bio_2'>&nbsp;&nbsp;&nbsp;&nbsp;{{ vm.home_bio_2 }}</div>
 
 	</div>
 
@@ -56,42 +56,8 @@
 
 	</div>
 
-	<!-- footer.html -->
-	<div class='footer_box' layout='column' layout-align='center center'>
-		
-		<div>
-			<img src="{{vm.stupidRobotsLogoSrc}}" class="footerLogo">
-		</div>
-
-		<div class='footer_nav' layout='row' layout-align='space-between center'>
-			<div class='footer_text'>Home</div>
-			<div class='footer_spacer'>|</div>
-			<div class='footer_text'>Media</div>
-			<div class='footer_spacer'>|</div>
-			<div class='footer_text'>Events</div>
-			<div class='footer_spacer'>|</div>
-			<div class='footer_text'>About</div>
-			<div class='footer_spacer'>|</div>
-			<div class='footer_text'>Contact Us</div>
-		</div>
-
-		<div class='footer_social_links' layout='row' layout-align='space-between center'>
-			<!-- Facebook -->
-			<div class='sm_link' ng-click='vm.openSocialMediaLink("facebook")'>
-				<img src='img/facebook.png'>
-			</div>
-
-			<!-- Insta -->
-			<div class='sm_link' ng-click='vm.openSocialMediaLink("instagram")'>
-                <img src='img/instagram.png'>
-            </div>
-
-			<!-- Twitter -->
-			<div class='sm_link' ng-click='vm.openSocialMediaLink("twitter")'>
-                <img src='img/twitter.png'>
-            </div>
-		</div>
-
-	</div>
+	<!-- Footer Directive -->
+    <div siteFooter></div>
+    <site-footer></site-footer>
 
 </div>

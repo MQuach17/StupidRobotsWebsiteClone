@@ -31,6 +31,7 @@
 
 		<!-- Directives -->
 		<script src='directives/resize.js'></script>
+		<script src='directives/footer.js'></script> 
 
 		<!-- Style -->
 		<link rel="stylesheet" type="text/css" href="style/style.css">
